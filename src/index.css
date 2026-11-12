@@ -1,0 +1,255 @@
+:root {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --bg-gradient: linear-gradient(135deg, #ffeef8 0%, #f7e8ff 100%);
+  --card-bg: #ffffff;
+  --primary-pink: #f472b6;
+  --primary-pink-hover: #e879f9;
+  --soft-pink-bg: #fff1f2;
+  --pink-border: #fbcfe8;
+  --text-dark: #4c1d95;
+  --text-muted: #831843;
+  --danger: #fb7185;
+  --danger-hover: #e11d48;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  color: var(--text-dark);
+}
+
+.app {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 32px;
+  background: var(--card-bg);
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(244, 114, 182, 0.15);
+  border: 2px solid var(--pink-border);
+}
+
+header {
+  border-bottom: 2px dashed var(--pink-border);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+header h1 {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1.8rem;
+}
+
+nav {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: var(--soft-pink-bg);
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  background: var(--pink-border);
+  color: var(--text-dark);
+}
+
+/* Form Styles */
+.form-card {
+  background: var(--soft-pink-bg);
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--pink-border);
+  margin-bottom: 28px;
+}
+
+.form-card h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+  color: var(--text-muted);
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+input {
+  flex: 1;
+  min-width: 180px;
+  padding: 10px 14px;
+  border: 1px solid var(--pink-border);
+  border-radius: 10px;
+  outline: none;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: var(--primary-pink);
+  box-shadow: 0 0 0 3px rgba(244, 114, 182, 0.2);
+}
+
+/* Table Design */
+.table-container {
+  overflow-x: auto;
+  border-radius: 14px;
+  border: 1px solid var(--pink-border);
+}
+
+.event-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.event-table th {
+  background: var(--soft-pink-bg);
+  color: var(--text-muted);
+  padding: 14px 16px;
+  font-weight: 700;
+  border-bottom: 1px solid var(--pink-border);
+}
+
+.event-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #fce7f3;
+}
+
+.event-table tr:hover {
+  background: #fff5f7;
+}
+
+.event-title a {
+  color: var(--text-muted);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.event-title a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.88;
+}
+
+.btn-primary {
+  background: var(--primary-pink);
+  color: white;
+}
+
+.btn-edit {
+  background: #fbe7f5;
+  color: #9d174d;
+  margin-right: 6px;
+}
+
+.btn-delete {
+  background: #ffe4e6;
+  color: #9f1239;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* Modal Popup */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(76, 29, 149, 0.2);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal-card {
+  background: white;
+  padding: 28px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  border: 2px solid var(--pink-border);
+}
+
+.modal-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.modal-form-group label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--text-muted);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Alert & Empty State */
+.alert-error {
+  color: var(--danger-hover);
+  font-weight: 500;
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.empty-state {
+  text-align: center;
+  color: #9d174d;
+  padding: 24px;
+}
+
+.tentang-container {
+  background: var(--soft-pink-bg);
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid var(--pink-border);
+}
+
+.badge-list {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.badge {
+  background: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border: 1px solid var(--pink-border);
+  font-weight: 600;
+}
